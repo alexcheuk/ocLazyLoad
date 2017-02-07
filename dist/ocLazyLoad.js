@@ -8,7 +8,7 @@
 (function (angular, window) {
     'use strict';
 
-    var regModules = ['ng', 'oc.lazyLoad'],
+    var regModules = ['oc.lazyLoad'],
         regInvokes = {},
         regConfigs = [],
         modulesToLoad = [],
@@ -20,7 +20,7 @@
         runBlocks = {},
         justLoaded = [];
 
-    var ocLazyLoad = angular.module('oc.lazyLoad', ['ng']);
+    var ocLazyLoad = angular.module('oc.lazyLoad', []);
 
     ocLazyLoad.provider('$ocLazyLoad', ["$controllerProvider", "$provide", "$compileProvider", "$filterProvider", "$injector", "$animateProvider", function ($controllerProvider, $provide, $compileProvider, $filterProvider, $injector, $animateProvider) {
         var modules = {},
